@@ -33,7 +33,7 @@ df_registros['Tipo_Movimiento_Desc'] = df_registros['Tipo_Movimiento'].map(
 print(f"✅ {len(df_registros)} registros cargados")
 df_registros.head()
 #4
-df_cuadro = pd.read_excel(nombre_excel, usecols=[0, 12], header=0)
+df_cuadro = pd.read_excel(nombre_excel, sheet_name='CONCEPTOS', usecols=[0, 12], header=0)
 df_cuadro.columns = ['Motivo', 'Emergencia_Cuadro']
 df_cuadro['Motivo'] = df_cuadro['Motivo'].astype(str).str.strip().str.zfill(4)
 
