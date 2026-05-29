@@ -73,3 +73,18 @@ df_resultado.to_excel('resultado_validacion.xlsx', index=False)
 files.download('resultado_validacion.xlsx')
 print("✅ Archivo descargado: resultado_validacion.xlsx")
 #who knows
+
+
+
+# Ver cómo llega el motivo del archivo de texto
+print("Motivos del archivo de texto (primeros 5):")
+print(df_registros['Motivo'].head())
+print("Tipo:", df_registros['Motivo'].dtype)
+
+print("\nMotivos del cuadro Excel (primeros 5):")
+print(df_cuadro['Motivo'].head())
+print("Tipo:", df_cuadro['Motivo'].dtype)
+
+# Buscar específicamente el 0001
+print("\n¿Existe 0001 en el archivo de texto?", '0001' in df_registros['Motivo'].values)
+print("¿Existe 0001 en el cuadro?", '0001' in df_cuadro['Motivo'].values)
