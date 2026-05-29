@@ -72,3 +72,4 @@ df_resultado = df_resultado[cols]
 df_resultado.to_excel('resultado_validacion.xlsx', index=False)
 files.download('resultado_validacion.xlsx')
 print("✅ Archivo descargado: resultado_validacion.xlsx")
+#who knows
